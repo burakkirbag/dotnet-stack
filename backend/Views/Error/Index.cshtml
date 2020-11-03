@@ -1,0 +1,32 @@
+﻿@model stack.Models.View.ErrorVM
+@{
+    ViewData["Title"] = "Bir Hata Oluştu";
+}
+
+<h1 class="text-danger">Hata</h1>
+<h2 class="text-danger">İşleminiz sırasında bir hata oluştu.</h2>
+
+@if (!string.IsNullOrEmpty(Model.RequestId))
+{
+    <p>
+        <strong>Request ID:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <h3>@Model.Message</h3>
+}
+
+@if (!string.IsNullOrEmpty(Model.DetailMessage))
+{
+    <p>@Model.DetailMessage</p>
+}
+
+@if (Model.Errors != null && Model.Errors.Count > 0)
+{
+    foreach (var error in Model.Errors)
+    {
+        <p>@error</p>
+    }
+}

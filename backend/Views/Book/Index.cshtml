@@ -1,0 +1,28 @@
+﻿@model List<stack.Data.Book>
+@{
+    ViewData["Title"] = "Book";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Book</h1>
+    <p>welcome to dotnet stack</p>
+    <div>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th width="30%">Title</th>
+                    <th>Summary</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Name</td>
+                        <td>@book.Summary</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

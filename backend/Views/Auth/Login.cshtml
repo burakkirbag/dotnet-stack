@@ -1,0 +1,16 @@
+﻿@model stack.Models.DTOs.LoginInput
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Stack</h1>
+    <p>Welcome to Login Page</p>
+
+    @using (Html.BeginForm("Login", "Auth", FormMethod.Post))
+    {
+        <p>@Html.TextBoxFor(m => m.Email, new { @type = "email", @placeholder="E-Posta Adresiniz" })</p>
+        <p>@Html.PasswordFor(m => m.Password, new { @placeholder = "Şifreniz" })</p>
+        <p><input type="submit" value="Giriş Yap" /></p>
+    }
+</div>

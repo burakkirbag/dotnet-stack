@@ -1,0 +1,9 @@
+.home-products .product {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.home-products .product .product__action li:first-child::before {
+    background: none;
+    width: 0;
+}

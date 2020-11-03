@@ -1,0 +1,13 @@
+<script>
+import { mapState, mapActions } from 'vuex'
+
+export default {
+  name: 'About',
+}
+</script>
+
+<template>
+  <div class="about">
+    <h1>This is an about page.</h1>
+  </div>
+</template>
